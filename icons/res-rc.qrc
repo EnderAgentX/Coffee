@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>home-button_icon-icons.com_72700.png</file>
+    <file>americano.png</file>
+    <file>cappuccino.png</file>
+    <file>cocoa.png</file>
+    <file>espresso.png</file>
+    <file>glasse.png</file>
+    <file>hot_chocolate.png</file>
+    <file>latte.png</file>
+    <file>macchiato.png</file>
+    <file>main_picture.png</file>
+    <file>moccachino.png</file>
+    <file>raf.png</file>
+    <file>viennese_coffee.png</file>
+  </qresource>
+  <qresource/>
+</RCC>
