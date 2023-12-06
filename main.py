@@ -13,11 +13,11 @@ from win4 import Ui_Dialog4
 from win5 import Ui_Dialog5
 
 
-
+# Менять файлы кроме main нельзя. Там интерфейс. Он сбростится если буду изменять его.
 
 class Coffee(QMainWindow):
     def __init__(self):
-
+        # Запускаем главное окно
         super(Coffee, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
@@ -33,7 +33,7 @@ class Coffee(QMainWindow):
         self.ui.btn_start.clicked.connect(self.openWindow2)
 
 
-    def plus(self):
+    def plus(self): # Таймер для прогрессбара
         if self.progress == 0:
             self.new_window = QtWidgets.QDialog()
             self.ui_window = Ui_Dialog4()
@@ -47,7 +47,7 @@ class Coffee(QMainWindow):
             self.openWindow5()
             self.progress = 0
 
-    def openWindow2(self):
+    def openWindow2(self): # Окно выбора кофе
         self.new_window = QtWidgets.QDialog()
         self.ui_window = Ui_Dialog()
         self.ui_window.setupUi(self.new_window)
@@ -68,18 +68,19 @@ class Coffee(QMainWindow):
         self.ui_window.btn_coffee_12.clicked.connect(self.openWindow3_12)
 
 
-    def openWindow5(self):
+    def openWindow5(self): # Последнее окно
         self.new_window = QtWidgets.QDialog()
         self.ui_window = Ui_Dialog5()
         self.ui_window.setupUi(self.new_window)
         self.new_window.show()
         self.ui_window.btn_home.clicked.connect(self.openWindow1)
 
-    def openWindow4(self):
+    def openWindow4(self): # Прогрессбар
         self.timer.start()
 
 
-
+    # Проблемная часть. Не могу объеденить в функцию, так как self.ui_window.btn_home.clicked.connect(self.openWindow1)
+    # Нельзя передать аргумент. А надо задавать иконки.
     def openWindow3_1(self):
         self.new_window.close()
         self.new_window = QtWidgets.QDialog()
@@ -88,24 +89,20 @@ class Coffee(QMainWindow):
         self.ui_window.setupUi(self.new_window)
         self.new_window.show()
         self.ui_window.btn_make.clicked.connect(self.openWindow4)
-        print(self.ui_window.spinBox1.text())
-        self.ui_window.Syrop_select = "icons/espresso.png"
-        #self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/espresso.png"))
-
+        self.ui_window.Syrop_select = "cons/caramel.png"
 
         def change():
             print(self.ui_window.spinBox2.text())
-            if self.ui_window.spinBox2.text() == "0":
-                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/espresso.png"))
-            elif  self.ui_window.spinBox2.text() == "1":
-                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/americano.png"))
+            if self.ui_window.spinBox2.text() == "1":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/caramel.png"))
             elif  self.ui_window.spinBox2.text() == "2":
-                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/raf.png"))
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/chocolate.png"))
             elif  self.ui_window.spinBox2.text() == "3":
-                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/viennese_coffee.png"))
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/coconut.png"))
             elif  self.ui_window.spinBox2.text() == "4":
-                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/cocoa.png"))
-
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/vanilla.png"))
+            elif  self.ui_window.spinBox2.text() == "5":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/bananas.png"))
 
 
         self.ui_window.spinBox2.valueChanged.connect(change)
@@ -124,6 +121,22 @@ class Coffee(QMainWindow):
         self.ui_window.setupUi(self.new_window)
         self.new_window.show()
         self.ui_window.btn_make.clicked.connect(self.openWindow4)
+        self.ui_window.Syrop_select = "cons/caramel.png"
+
+        def change():
+            print(self.ui_window.spinBox2.text())
+            if self.ui_window.spinBox2.text() == "1":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/caramel.png"))
+            elif self.ui_window.spinBox2.text() == "2":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/chocolate.png"))
+            elif self.ui_window.spinBox2.text() == "3":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/coconut.png"))
+            elif self.ui_window.spinBox2.text() == "4":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/vanilla.png"))
+            elif self.ui_window.spinBox2.text() == "5":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/bananas.png"))
+
+        self.ui_window.spinBox2.valueChanged.connect(change)
 
     def openWindow3_3(self):
         self.new_window.close()
@@ -133,6 +146,22 @@ class Coffee(QMainWindow):
         self.ui_window.setupUi(self.new_window)
         self.new_window.show()
         self.ui_window.btn_make.clicked.connect(self.openWindow4)
+        self.ui_window.Syrop_select = "cons/caramel.png"
+
+        def change():
+            print(self.ui_window.spinBox2.text())
+            if self.ui_window.spinBox2.text() == "1":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/caramel.png"))
+            elif self.ui_window.spinBox2.text() == "2":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/chocolate.png"))
+            elif self.ui_window.spinBox2.text() == "3":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/coconut.png"))
+            elif self.ui_window.spinBox2.text() == "4":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/vanilla.png"))
+            elif self.ui_window.spinBox2.text() == "5":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/bananas.png"))
+
+        self.ui_window.spinBox2.valueChanged.connect(change)
 
     def openWindow3_4(self):
         self.new_window.close()
@@ -142,6 +171,22 @@ class Coffee(QMainWindow):
         self.ui_window.setupUi(self.new_window)
         self.new_window.show()
         self.ui_window.btn_make.clicked.connect(self.openWindow4)
+        self.ui_window.Syrop_select = "cons/caramel.png"
+
+        def change():
+            print(self.ui_window.spinBox2.text())
+            if self.ui_window.spinBox2.text() == "1":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/caramel.png"))
+            elif self.ui_window.spinBox2.text() == "2":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/chocolate.png"))
+            elif self.ui_window.spinBox2.text() == "3":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/coconut.png"))
+            elif self.ui_window.spinBox2.text() == "4":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/vanilla.png"))
+            elif self.ui_window.spinBox2.text() == "5":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/bananas.png"))
+
+        self.ui_window.spinBox2.valueChanged.connect(change)
 
     def openWindow3_5(self):
         self.new_window.close()
@@ -151,6 +196,22 @@ class Coffee(QMainWindow):
         self.ui_window.setupUi(self.new_window)
         self.new_window.show()
         self.ui_window.btn_make.clicked.connect(self.openWindow4)
+        self.ui_window.Syrop_select = "cons/caramel.png"
+
+        def change():
+            print(self.ui_window.spinBox2.text())
+            if self.ui_window.spinBox2.text() == "1":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/caramel.png"))
+            elif self.ui_window.spinBox2.text() == "2":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/chocolate.png"))
+            elif self.ui_window.spinBox2.text() == "3":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/coconut.png"))
+            elif self.ui_window.spinBox2.text() == "4":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/vanilla.png"))
+            elif self.ui_window.spinBox2.text() == "5":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/bananas.png"))
+
+        self.ui_window.spinBox2.valueChanged.connect(change)
 
     def openWindow3_6(self):
         self.new_window.close()
@@ -160,6 +221,22 @@ class Coffee(QMainWindow):
         self.ui_window.setupUi(self.new_window)
         self.new_window.show()
         self.ui_window.btn_make.clicked.connect(self.openWindow4)
+        self.ui_window.Syrop_select = "cons/caramel.png"
+
+        def change():
+            print(self.ui_window.spinBox2.text())
+            if self.ui_window.spinBox2.text() == "1":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/caramel.png"))
+            elif self.ui_window.spinBox2.text() == "2":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/chocolate.png"))
+            elif self.ui_window.spinBox2.text() == "3":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/coconut.png"))
+            elif self.ui_window.spinBox2.text() == "4":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/vanilla.png"))
+            elif self.ui_window.spinBox2.text() == "5":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/bananas.png"))
+
+        self.ui_window.spinBox2.valueChanged.connect(change)
 
     def openWindow3_7(self):
         self.new_window.close()
@@ -169,6 +246,22 @@ class Coffee(QMainWindow):
         self.ui_window.setupUi(self.new_window)
         self.new_window.show()
         self.ui_window.btn_make.clicked.connect(self.openWindow4)
+        self.ui_window.Syrop_select = "cons/caramel.png"
+
+        def change():
+            print(self.ui_window.spinBox2.text())
+            if self.ui_window.spinBox2.text() == "1":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/caramel.png"))
+            elif self.ui_window.spinBox2.text() == "2":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/chocolate.png"))
+            elif self.ui_window.spinBox2.text() == "3":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/coconut.png"))
+            elif self.ui_window.spinBox2.text() == "4":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/vanilla.png"))
+            elif self.ui_window.spinBox2.text() == "5":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/bananas.png"))
+
+        self.ui_window.spinBox2.valueChanged.connect(change)
 
     def openWindow3_8(self):
         self.new_window.close()
@@ -178,6 +271,22 @@ class Coffee(QMainWindow):
         self.ui_window.setupUi(self.new_window)
         self.new_window.show()
         self.ui_window.btn_make.clicked.connect(self.openWindow4)
+        self.ui_window.Syrop_select = "cons/caramel.png"
+
+        def change():
+            print(self.ui_window.spinBox2.text())
+            if self.ui_window.spinBox2.text() == "1":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/caramel.png"))
+            elif self.ui_window.spinBox2.text() == "2":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/chocolate.png"))
+            elif self.ui_window.spinBox2.text() == "3":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/coconut.png"))
+            elif self.ui_window.spinBox2.text() == "4":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/vanilla.png"))
+            elif self.ui_window.spinBox2.text() == "5":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/bananas.png"))
+
+        self.ui_window.spinBox2.valueChanged.connect(change)
 
     def openWindow3_9(self):
         self.new_window.close()
@@ -187,6 +296,22 @@ class Coffee(QMainWindow):
         self.ui_window.setupUi(self.new_window)
         self.new_window.show()
         self.ui_window.btn_make.clicked.connect(self.openWindow4)
+        self.ui_window.Syrop_select = "cons/caramel.png"
+
+        def change():
+            print(self.ui_window.spinBox2.text())
+            if self.ui_window.spinBox2.text() == "1":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/caramel.png"))
+            elif self.ui_window.spinBox2.text() == "2":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/chocolate.png"))
+            elif self.ui_window.spinBox2.text() == "3":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/coconut.png"))
+            elif self.ui_window.spinBox2.text() == "4":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/vanilla.png"))
+            elif self.ui_window.spinBox2.text() == "5":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/bananas.png"))
+
+        self.ui_window.spinBox2.valueChanged.connect(change)
 
     def openWindow3_10(self):
         self.new_window.close()
@@ -196,6 +321,22 @@ class Coffee(QMainWindow):
         self.ui_window.setupUi(self.new_window)
         self.new_window.show()
         self.ui_window.btn_make.clicked.connect(self.openWindow4)
+        self.ui_window.Syrop_select = "cons/caramel.png"
+
+        def change():
+            print(self.ui_window.spinBox2.text())
+            if self.ui_window.spinBox2.text() == "1":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/caramel.png"))
+            elif self.ui_window.spinBox2.text() == "2":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/chocolate.png"))
+            elif self.ui_window.spinBox2.text() == "3":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/coconut.png"))
+            elif self.ui_window.spinBox2.text() == "4":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/vanilla.png"))
+            elif self.ui_window.spinBox2.text() == "5":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/bananas.png"))
+
+        self.ui_window.spinBox2.valueChanged.connect(change)
 
     def openWindow3_11(self):
         self.new_window.close()
@@ -206,6 +347,23 @@ class Coffee(QMainWindow):
         self.new_window.show()
         self.ui_window.btn_make.clicked.connect(self.openWindow4)
 
+        self.ui_window.Syrop_select = "cons/caramel.png"
+
+        def change():
+            print(self.ui_window.spinBox2.text())
+            if self.ui_window.spinBox2.text() == "1":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/caramel.png"))
+            elif self.ui_window.spinBox2.text() == "2":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/chocolate.png"))
+            elif self.ui_window.spinBox2.text() == "3":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/coconut.png"))
+            elif self.ui_window.spinBox2.text() == "4":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/vanilla.png"))
+            elif self.ui_window.spinBox2.text() == "5":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/bananas.png"))
+
+        self.ui_window.spinBox2.valueChanged.connect(change)
+
     def openWindow3_12(self):
         self.new_window.close()
         self.new_window = QtWidgets.QDialog()
@@ -214,6 +372,23 @@ class Coffee(QMainWindow):
         self.ui_window.setupUi(self.new_window)
         self.new_window.show()
         self.ui_window.btn_make.clicked.connect(self.openWindow4)
+
+        self.ui_window.Syrop_select = "cons/caramel.png"
+
+        def change():
+            print(self.ui_window.spinBox2.text())
+            if self.ui_window.spinBox2.text() == "1":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/caramel.png"))
+            elif self.ui_window.spinBox2.text() == "2":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/chocolate.png"))
+            elif self.ui_window.spinBox2.text() == "3":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/coconut.png"))
+            elif self.ui_window.spinBox2.text() == "4":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/vanilla.png"))
+            elif self.ui_window.spinBox2.text() == "5":
+                self.ui_window.label_syrop.setPixmap(QtGui.QPixmap("icons/bananas.png"))
+
+        self.ui_window.spinBox2.valueChanged.connect(change)
 
     def openWindow1(self):
         self.show()

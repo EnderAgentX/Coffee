@@ -12,9 +12,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_Dialog3(object):
-
     Coffee_select = "icons/americano.png"
-    Syrop_select = "icons/espresso.png"
 
     def setupUi(self, Dialog3):
         Dialog3.setObjectName("Dialog3")
@@ -38,24 +36,23 @@ class Ui_Dialog3(object):
         self.spinBox1.setObjectName("spinBox1")
         self.spinBox2 = QtWidgets.QSpinBox(Dialog3)
         self.spinBox2.setGeometry(QtCore.QRect(560, 280, 91, 61))
+        self.spinBox2.setMinimum(1)
         self.spinBox2.setMaximum(5)
         self.spinBox2.setObjectName("spinBox2")
-        self.spinBox3 = QtWidgets.QSpinBox(Dialog3)
-        self.spinBox3.setGeometry(QtCore.QRect(560, 370, 91, 61))
-        self.spinBox3.setObjectName("spinBox3")
         self.label_2 = QtWidgets.QLabel(Dialog3)
-        self.label_2.setGeometry(QtCore.QRect(410, 210, 141, 31))
+        self.label_2.setGeometry(QtCore.QRect(390, 210, 141, 31))
+        self.label_2.setStyleSheet("font: 75 14pt \"MS Shell Dlg 2\";")
+        self.label_2.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(Dialog3)
-        self.label_3.setGeometry(QtCore.QRect(410, 300, 141, 31))
+        self.label_3.setGeometry(QtCore.QRect(390, 290, 141, 31))
+        self.label_3.setStyleSheet("font: 75 14pt \"MS Shell Dlg 2\";")
+        self.label_3.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label_3.setObjectName("label_3")
-        self.label_4 = QtWidgets.QLabel(Dialog3)
-        self.label_4.setGeometry(QtCore.QRect(410, 390, 141, 31))
-        self.label_4.setObjectName("label_4")
         self.label_syrop = QtWidgets.QLabel(Dialog3)
         self.label_syrop.setGeometry(QtCore.QRect(670, 280, 61, 51))
         self.label_syrop.setText("")
-        self.label_syrop.setPixmap(QtGui.QPixmap(self.Syrop_select))
+        self.label_syrop.setPixmap(QtGui.QPixmap("icons/caramel.png"))
         self.label_syrop.setScaledContents(True)
         self.label_syrop.setObjectName("label_syrop")
 
@@ -66,9 +63,9 @@ class Ui_Dialog3(object):
         _translate = QtCore.QCoreApplication.translate
         Dialog3.setWindowTitle(_translate("Dialog3", "Dialog"))
         self.btn_make.setText(_translate("Dialog3", "Make"))
-        self.label_2.setText(_translate("Dialog3", "Сахар"))
-        self.label_3.setText(_translate("Dialog3", "Сироп"))
-        self.label_4.setText(_translate("Dialog3", "Молоко"))
+        self.label_2.setText(_translate("Dialog3", "Сахар:"))
+        self.label_3.setText(_translate("Dialog3", "Сироп:"))
+
 
 
 if __name__ == "__main__":
