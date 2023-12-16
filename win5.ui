@@ -32,7 +32,7 @@
     <string/>
    </property>
    <property name="icon">
-    <iconset resource="icons/res-rc.qrc">
+    <iconset>
      <normaloff>:/icons/home-button_icon-icons.com_72700.png</normaloff>:/icons/home-button_icon-icons.com_72700.png</iconset>
    </property>
    <property name="iconSize">
@@ -52,13 +52,13 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">font: 15pt &quot;Stencil&quot;;
 background-color: rgba(255,255,255,40);
 border: 5px solid rgba(255,255,255,40);
 border-radius: 7px;</string>
    </property>
    <property name="text">
-    <string>Возьмите ваш напиток</string>
+    <string>take your coffee</string>
    </property>
    <property name="textFormat">
     <enum>Qt::AutoText</enum>

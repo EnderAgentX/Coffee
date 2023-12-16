@@ -17,12 +17,13 @@ class Ui_Dialog(object):
         Dialog.resize(800, 600)
         Dialog.setStyleSheet("background-color: rgb(255, 170, 127);")
         self.btn_end = QtWidgets.QPushButton(Dialog)
-        self.btn_end.setGeometry(QtCore.QRect(310, 0, 150, 90))
+        self.btn_end.setGeometry(QtCore.QRect(10, 10, 101, 51))
         self.btn_end.setStyleSheet("background-color: rgb(255, 85, 0);\n"
+"font: 10pt \"Stencil\";\n"
 "background-color: rgb(255, 255, 255);")
         self.btn_end.setObjectName("btn_end")
         self.layoutWidget = QtWidgets.QWidget(Dialog)
-        self.layoutWidget.setGeometry(QtCore.QRect(30, 120, 741, 436))
+        self.layoutWidget.setGeometry(QtCore.QRect(30, 80, 741, 508))
         self.layoutWidget.setObjectName("layoutWidget")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.layoutWidget)
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -248,19 +249,19 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.btn_end.setText(_translate("Dialog", "Назад"))
-        self.label_2.setText(_translate("Dialog", "Двойной эспрессо"))
-        self.label_6.setText(_translate("Dialog", "Мокачино"))
-        self.label_7.setText(_translate("Dialog", "Раф"))
-        self.label_4.setText(_translate("Dialog", "Макиато"))
-        self.label_3.setText(_translate("Dialog", "Американо"))
-        self.label_5.setText(_translate("Dialog", "Латте"))
-        self.label_8.setText(_translate("Dialog", "Капучино"))
-        self.label.setText(_translate("Dialog", "Эспрессо"))
-        self.label_9.setText(_translate("Dialog", "Гляссе"))
-        self.label_10.setText(_translate("Dialog", "Венский кофе"))
-        self.label_11.setText(_translate("Dialog", "Горячий шоколад"))
-        self.label_12.setText(_translate("Dialog", "Какао"))
+        self.btn_end.setText(_translate("Dialog", "Back"))
+        self.label_2.setText(_translate("Dialog", "Double espresso"))
+        self.label_6.setText(_translate("Dialog", "Mochaccino"))
+        self.label_7.setText(_translate("Dialog", "Raf"))
+        self.label_4.setText(_translate("Dialog", "Macchiato"))
+        self.label_3.setText(_translate("Dialog", "Americano"))
+        self.label_5.setText(_translate("Dialog", "Latte"))
+        self.label_8.setText(_translate("Dialog", "Cappuccino"))
+        self.label.setText(_translate("Dialog", "Espresso"))
+        self.label_9.setText(_translate("Dialog", "Glasse"))
+        self.label_10.setText(_translate("Dialog", "Viennese coffee"))
+        self.label_11.setText(_translate("Dialog", "Hot chocolate"))
+        self.label_12.setText(_translate("Dialog", "Cocoa"))
 
 
 if __name__ == "__main__":

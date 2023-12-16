@@ -25,9 +25,22 @@ class Ui_MainWindow(object):
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.btn_start = QtWidgets.QPushButton(self.centralwidget)
-        self.btn_start.setGeometry(QtCore.QRect(300, 290, 171, 91))
-        self.btn_start.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.btn_start.setGeometry(QtCore.QRect(300, 330, 171, 91))
+        self.btn_start.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"font: 15pt \"Stencil\";")
         self.btn_start.setObjectName("btn_start")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(340, 130, 91, 31))
+        self.label_2.setStyleSheet("background-color: rgb(0, 0, 0);\n"
+"color: rgb(255, 255, 255);\n"
+"font: 15pt \"Stencil\";")
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(360, 160, 91, 31))
+        self.label_3.setStyleSheet("background-color: rgb(0, 0, 0);\n"
+"color: rgb(255, 255, 255);\n"
+"font: 13pt \"Stencil\";")
+        self.label_3.setObjectName("label_3")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 26))
@@ -44,6 +57,9 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.btn_start.setText(_translate("MainWindow", "Make coffee"))
+        self.label_2.setText(_translate("MainWindow", "Coffee"))
+        self.label_3.setText(_translate("MainWindow", "Vibe"))
+
 
 
 

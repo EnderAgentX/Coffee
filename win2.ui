@@ -19,27 +19,28 @@
   <widget class="QPushButton" name="btn_end">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>0</y>
-     <width>150</width>
-     <height>90</height>
+     <x>10</x>
+     <y>10</y>
+     <width>101</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 85, 0);
+font: 10pt &quot;Stencil&quot;;
 background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>Назад</string>
+    <string>Back</string>
    </property>
   </widget>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>120</y>
+     <y>80</y>
      <width>741</width>
-     <height>436</height>
+     <height>508</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout_2">
@@ -49,7 +50,7 @@ background-color: rgb(255, 255, 255);</string>
        <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="text">
-       <string>Двойной эспрессо</string>
+       <string>Double espresso</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -62,7 +63,7 @@ background-color: rgb(255, 255, 255);</string>
        <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="text">
-       <string>Мокачино</string>
+       <string>Mochaccino</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -167,7 +168,7 @@ background-color: rgb(255, 255, 255);</string>
        <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="text">
-       <string>Раф</string>
+       <string>Raf</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -180,7 +181,7 @@ background-color: rgb(255, 255, 255);</string>
        <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="text">
-       <string>Макиато</string>
+       <string>Macchiato</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -193,7 +194,7 @@ background-color: rgb(255, 255, 255);</string>
        <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="text">
-       <string>Американо</string>
+       <string>Americano</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -206,7 +207,7 @@ background-color: rgb(255, 255, 255);</string>
        <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="text">
-       <string>Латте</string>
+       <string>Latte</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -219,7 +220,7 @@ background-color: rgb(255, 255, 255);</string>
        <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="text">
-       <string>Капучино</string>
+       <string>Cappuccino</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -232,7 +233,7 @@ background-color: rgb(255, 255, 255);</string>
        <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="text">
-       <string>Эспрессо</string>
+       <string>Espresso</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -429,7 +430,7 @@ background-color: rgb(255, 255, 255);</string>
        <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="text">
-       <string>Гляссе</string>
+       <string>Glasse</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -442,7 +443,7 @@ background-color: rgb(255, 255, 255);</string>
        <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="text">
-       <string>Венский кофе</string>
+       <string>Viennese coffee</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -455,7 +456,7 @@ background-color: rgb(255, 255, 255);</string>
        <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="text">
-       <string>Горячий шоколад</string>
+       <string>Hot chocolate</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -468,7 +469,7 @@ background-color: rgb(255, 255, 255);</string>
        <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="text">
-       <string>Какао</string>
+       <string>Cocoa</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
